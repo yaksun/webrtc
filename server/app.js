@@ -1,4 +1,5 @@
 var https= require('https')
+var serveIndex = require('serve-index')
 var express = require('express')
 var fs = require('fs')
 
@@ -9,6 +10,7 @@ var options = {
 
 var app = express() 
 
+app.use(serveIndex('./public'))
 app.use(express.static('./public'))
 
 var https_server = https.createServer(options,app)

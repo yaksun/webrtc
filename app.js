@@ -24,5 +24,5 @@ var options = {
 
 var https_server = https.createServer(options,app)
 
-https_server.listen(80,'0.0.0.0')
+https_server.listen(443,'0.0.0.0')
 console.log('服务已经启动');

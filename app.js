@@ -15,11 +15,9 @@ http_server.listen(80,'0.0.0.0');
 
 
 var options = {
-    // key:fs.readFileSync('./cret/openssl_pri_pkcs8.key'),
-    // cret:fs.readFileSync('./cret/openssl_pub.key')
 
-    key:fs.readFileSync('./cret/server-key.key'),
-    cret:fs.readFileSync('./cret/server.pem')
+    key:fs.readFileSync('./cret02/privatekey.pem'),
+    cret:fs.readFileSync('../cret02/certificate.pem')
 }
 
 var https_server = https.createServer(options,app)
